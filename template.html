@@ -1,0 +1,73 @@
+<!--nosandbox-->
+<!-- DO NOT EDIT OR REMOVE THIS CODE BLOCK -->
+<script>
+    <!--LIB-->
+</script>
+
+<!-- YOU CAN INCLUDE ANY STYLES HERE -->
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .ad-close {
+        height: 32px;
+        width: 32px;
+        display: block;
+        text-decoration: none;
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+        top: 0px;
+        right: 0;
+        background: url(http://discoveryint1.edgeboss.net/download/discoveryint1/ads/close-button.png) 0px 0px no-repeat;
+    }
+</style>
+
+<!-- YOUR HTML CONTENT SHOULD BE PLACED INSIDE THIS DIV, DO NOT REMOVE -->
+<div id="stage">
+
+    <!-- This is just an example it can be removed or edited as necessary -->
+
+    <!-- CLOSE BUTTON MUST ALWAYS HAVE THE CLASS .ad-close -->
+    <a href="#" class="ad-close"></a>
+
+    <img src="http://www.festivalsadelaide.com.au/wp-content/gallery/oz-asia-festival/spice-of-life-900x600.jpg" />
+
+</div>
+
+<!-- YOU CAN INCLUDE ANY CUSTOM SCRIPTS OR CODE HERE -->
+<script>
+</script>
+
+
+<!-- EXAMPLE USAGE OF THE OVERLAY API. THIS IS REQUIRED TO ENABLE FUNCTIONALITY WHEN AD SERVED -->
+<script>
+    //Create a new overlay instance
+    var overlay = AdOps.overlay({
+        clickUrl: 'http://www.test.com',
+        width: 900,
+        height: 600
+    });
+
+    //Listen for the overlay to dispatch the ready event and setup your ads initial state
+    overlay.addEvent('ADOPS_OVERLAY_READY', function() {
+        //Call customer user function
+
+    });
+
+    //Listen for the overlay to dispatch the closed event and show/hide the appropriate content
+    overlay.addEvent('ADOPS_OVERLAY_CLOSED', function() {
+        //Call customer user function
+
+    });
+
+    overlay.addEvent('ADOPS_OVERLAY_OPENED', function() {
+        //Call customer user function
+
+    });
+
+    //Initialise the overlay
+    overlay.init();
+</script>

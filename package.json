@@ -1,0 +1,18 @@
+{
+  "name": "html5-overlay",
+  "version": "0.0.1",
+  "description": "A HTML5 Template",
+  "author": "Stuart Williams",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^4.0.1",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-uglify": "^0.10.1",
+    "uglify-js": "^2.6.0"
+  },
+  "dependencies": {
+    "ad-utils": "0.0.3"
+  }
+}
