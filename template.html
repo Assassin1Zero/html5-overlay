@@ -18,7 +18,10 @@
 <!-- EXAMPLE USAGE OF THE OVERLAY API. THIS IS REQUIRED TO ENABLE FUNCTIONALITY WHEN AD SERVED -->
 <script>
 //Create a new overlay instance
-var overlay = AdOps.overlay();
+var overlay = AdOps.overlay({
+	width: 900, //Omit or set to undefined for full screen
+	height: 600 //Omit or set to undefined for full screen
+});
 
 //Listen for the overlay to dispatch the ready event and setup your ads initial state
 overlay.addEvent('ADOPS_OVERLAY_READY', function() {
@@ -42,6 +45,12 @@ overlay.addEvent('ADOPS_OVERLAY_RESIZED', function() {
 overlay.addEvent('ADOPS_OVERLAY_CLOSED', function() {
     //Call customer user function
     console.log('OVERLAY CLOSED');
+});
+
+overlay.setStyles({
+	'body': {
+		'background': 'black'
+	}
 });
 
 //Initialise the overlay
