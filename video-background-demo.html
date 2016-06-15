@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 Template</title>
+	<script src="/helper.js"></script>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+
+		.ad-close {
+			height: 32px;
+			width: 32px;
+			display: block;
+			text-decoration: none;
+			position: absolute;
+			z-index: 2;
+			cursor: pointer;
+			top: 0px;
+			right: 0;
+			padding-right: 20px;
+			background: url(http://discoveryint1.edgeboss.net/download/discoveryint1/ads/close-button.png) 0px 0px no-repeat;
+		}
+
+		.ad-click {
+			cursor: pointer;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		#canvas {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		#video {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="Overlay_Stage">
+		<a href="#" class="ad-close"></a>
+
+		<!-- <img class="ad-click" src="http://www.festivalsadelaide.com.au/wp-content/gallery/oz-asia-festival/spice-of-life-900x600.jpg" width="100%" height="100%" /> -->
+
+		<canvas id="canvas"></canvas>
+		<video id="video" src="/video.mp4" controls="false" autoplay preload="auto"></video>
+
+	</div>
+	<script>
+		AdOps.overlay.initDefaultBehaviour();
+
+		AdOps.overlay.parentStyles([{
+			'.video-wrapper': {
+				//zIndex: 9999991
+			}
+		}, {
+			'#logo': {
+				zIndex: 9999990
+			}
+		}, {
+			'.dni-heading': {
+				display: 'none'
+			}
+		}, {
+			header: {
+				zIndex: 9999992
+			}
+		}, {
+			'.dni-subnav': {
+				zIndex: 9999993
+			}
+		}]);
+
+		var d = document,
+			video = d.getElementById('video'),
+			canvas = d.getElementById('canvas'),
+			context = canvas.getContext('2d'),
+			cw = Math.floor(canvas.clientWidth),
+			ch = Math.floor(canvas.clientHeight);
+
+		function draw(v, c, w, h) {
+			if (v.paused || v.ended) return false;
+			c.drawImage(v, 0, 0, w, h);
+			setTimeout(draw, 5, v, c, w, h);
+		}
+
+		video.addEventListener('play', function(e) {
+			console.log('playing');
+			draw(this, context, cw, ch);
+		}, false);
+
+		video.addEventListener('ended', function() {
+
+			AdOps.fn.closeOverlay();
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+			canvas.setAttribute('width', cw);
+			canvas.setAttribute('height', ch);
+			video.play();
+		});
+	</script>
+</body>
+
+
+</html>

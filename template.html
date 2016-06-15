@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Advertisment</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="Overlay_Stage">
+    <a href="#" class="ad-close"></a>
+
+    <img class="ad-click" src="900x600.jpg" width="100%" height="100%" />
+</div>
+
+<!-- must include the overlay SDK -->
+<script src="main.min.js"></script>
+<!-- EXAMPLE USAGE OF THE OVERLAY API. THIS IS REQUIRED TO ENABLE FUNCTIONALITY WHEN AD SERVED -->
+<script>
+//Create a new overlay instance
+var overlay = AdOps.overlay();
+
+//Listen for the overlay to dispatch the ready event and setup your ads initial state
+overlay.addEvent('ADOPS_OVERLAY_READY', function() {
+    //Call customer user function
+    console.log('OVERLAY READY');
+});
+
+//Listen for the overlay to dispatch the opened event, start playback of any media etc
+overlay.addEvent('ADOPS_OVERLAY_OPENED', function() {
+    //Call customer user function
+    console.log('OVERLAY OPENED');
+});
+
+//Listen for the overlay to dispatch the resized event
+overlay.addEvent('ADOPS_OVERLAY_RESIZED', function() {
+    //Call customer user function
+    console.log('OVERLAY RESIZED');
+});
+
+//Listen for the overlay to dispatch the closed event
+overlay.addEvent('ADOPS_OVERLAY_CLOSED', function() {
+    //Call customer user function
+    console.log('OVERLAY CLOSED');
+});
+
+//Initialise the overlay
+overlay.init();
+</script>
+
+</body>
+</html>

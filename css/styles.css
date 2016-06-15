@@ -1,0 +1,22 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.ad-close {
+    height: 32px;
+    width: 32px;
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    top: 0px;
+    right: 0;
+    padding-right: 20px;
+    background: url(http://discoveryint1.edgeboss.net/download/discoveryint1/ads/close-button.png) 0px 0px no-repeat;
+}
+
+.ad-click {
+    cursor: pointer;
+}

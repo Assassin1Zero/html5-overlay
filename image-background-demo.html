@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 Template</title>
+	<script src="/helper.js"></script>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+
+		.ad-close {
+			height: 32px;
+			width: 32px;
+			display: block;
+			text-decoration: none;
+			position: absolute;
+			z-index: 9999999;
+			cursor: pointer;
+			top: 0px;
+			right: 0;
+			padding-right: 20px;
+			background: url(http://discoveryint1.edgeboss.net/download/discoveryint1/ads/close-button.png) 0px 0px no-repeat;
+		}
+
+		.ad-click {
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div id="Overlay_Stage">
+		<a href="#" class="ad-close"></a>
+
+		<img class="ad-click" src="http://www.festivalsadelaide.com.au/wp-content/gallery/oz-asia-festival/spice-of-life-900x600.jpg" width="100%" height="100%" />
+
+	</div>
+	<script>
+		AdOps.overlay.initDefaultBehaviour();
+
+		AdOps.overlay.parentStyles([{
+			'.video-wrapper, .fusion-video-player': {
+				zIndex: 9999991
+			}
+		}, {
+			'#logo': {
+				zIndex: 9999990
+			}
+		}, {
+			'.dni-heading': {
+				display: 'none'
+			}
+		}, {
+			header: {
+				zIndex: 9999992
+			}
+		}, {
+			'.dni-subnav': {
+				zIndex: 9999993
+			}
+		}]);
+
+	</script>
+</body>
+
+
+</html>

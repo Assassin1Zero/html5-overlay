@@ -1,0 +1,24 @@
+{
+    "curly": false,
+    "eqeqeq": true,
+    "forin": true,
+    "freeze": true,
+    "maxcomplexity": 8,
+    "maxdepth": 3,
+    "noarg": true,
+    "nocomma": true,
+    "nonbsp": true,
+    "nonew": true,
+    "notypeof": true,
+    "undef": true,
+    "singleGroups": true,
+    "strict": true,
+    "undef": true,
+    "unused": true,
+    "quotmark": "single",
+    "maxerr": 5,
+    "mocha": true,
+    "browserify": true,
+    "node":true
+
+}
