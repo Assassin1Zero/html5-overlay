@@ -42,7 +42,7 @@ The SDK dispatches several events during the lifecycle of the ad which enable th
 * ADOPS_OVERLAY_RESIZED - Dispatched when ad is resize or re-centered
 * ADOPS_OVERLAY_CLOSED - Dispatched when ad is closed
 
-A convenience method is exposed via the pushdown SDK to handle setting event listeners.
+A convenience method is exposed via the overlay SDK to handle setting event listeners.
 
 ```
 !#JavaScript
